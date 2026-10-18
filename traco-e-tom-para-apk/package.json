@@ -1,0 +1,35 @@
+{
+  "name": "reino-encantado",
+  "appId": "br.com.reinoencantado.cores",
+  "version": "2.0.0",
+  "private": true,
+  "description": "Reino Encantado - jogo de colorir por numeros com 31 ilustracoes vetoriais originais",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "start": "node scripts/serve.mjs",
+    "icons": "node scripts/make-icons.mjs",
+    "site": "node scripts/make-site.mjs",
+    "android:add": "npx cap add android",
+    "android:sync": "npx cap sync android",
+    "android:open": "npx cap open android",
+    "android:prepare": "npm run icons && node scripts/apply-android.mjs",
+    "android:build": "cd android && gradlew.bat bundleRelease",
+    "android:apk": "cd android && gradlew.bat assembleDebug",
+    "android:apk:release": "cd android && gradlew.bat assembleRelease",
+    "app": "npm run android:sync && npm run android:prepare && npm run android:open"
+  },
+  "dependencies": {
+    "@capacitor/android": "^8.5.3",
+    "@capacitor/app": "^8.1.2",
+    "@capacitor/core": "^8.5.3",
+    "@capacitor/splash-screen": "^8.0.2",
+    "@capacitor/status-bar": "^8.0.4",
+    "@capacitor-community/admob": "^8.2.1",
+    "cordova-plugin-purchase": "^13.19.1"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "^8.5.3"
+  }
+}
