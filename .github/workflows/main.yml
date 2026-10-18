@@ -23,12 +23,16 @@ jobs:
         java-version: '17'
         distribution: 'temurin'
 
-    - name: Instalar Dependencias e Compilar
+    - name: Instalar Dependencias do Projeto
       run: |
         cd traco-e-tom-para-apk
         npm install
-        npm run android:sync
-        npm run android:prepare
+
+    - name: Adicionar e Sincronizar Plataforma Android
+      run: |
+        cd traco-e-tom-para-apk
+        npx cap add android || true
+        npx cap sync android
 
     - name: Compilar APK com Gradle
       run: |
