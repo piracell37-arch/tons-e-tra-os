@@ -4,17 +4,17 @@ window.CONFIG = {
   version: '2.0.0',
   /* A pagina publicada esta no ar, mas ainda mostra o placeholder de e-mail:
      troque supportEmail, rode `npm run site` e republique a pasta site/. */
-  supportEmail: 'SUBSTITUA-seu-email@dominio.com',
+  supportEmail: 'piracell37@gmail.com',
   privacyUrl: 'https://reino-encantado-hkno7apunhd.qoder.website/privacidade.html',
 
   admob: {
     enabled: true,
     /* IDs de TESTE do Google. Substitua pelos seus antes de publicar:
        banner.android / interstitial.android / rewarded.android */
-    appId: 'ca-app-pub-3940256099942544~3347511713',
-    banner: 'ca-app-pub-3940256099942544/6300978111',
-    interstitial: 'ca-app-pub-3940256099942544/1033173771',
-    rewarded: 'ca-app-pub-3940256099942544/5224283345',
+    appId: 'ca-app-pub-9963092807242586~9730329908',
+    banner: 'ca-app-pub-9963092807242586/1900686204',
+    interstitial: 'ca-app-pub-9963092807242586/8185973088',
+    rewarded: 'ca-app-pub-9963092807242586/3360362672',
     /* Publico declarado "para todos os publicos": o app nao e dirigido a crianças,
        entao os anuncios deixam de ser segmentados para menores e a receita sobe.
        Se um dia voce mudar a ficha da Play para "criancas", volte para true. */
