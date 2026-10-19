@@ -1,9 +1,9 @@
 {
-  "name": "reino-encantado",
+  "name": "traco-e-tom",
   "appId": "br.com.reinoencantado.cores",
-  "version": "2.0.0",
+  "version": "2.0.3",
   "private": true,
-  "description": "Reino Encantado - jogo de colorir por numeros com 31 ilustracoes vetoriais originais",
+  "description": "Traco & Tom - jogo de colorir por numeros com 31 ilustracoes vetoriais originais",
   "engines": {
     "node": ">=22"
   },
@@ -11,10 +11,11 @@
     "start": "node scripts/serve.mjs",
     "icons": "node scripts/make-icons.mjs",
     "site": "node scripts/make-site.mjs",
+    "zip": "node scripts/make-zip.mjs",
     "android:add": "npx cap add android",
     "android:sync": "npx cap sync android",
-    "android:open": "npx cap open android",
     "android:prepare": "npm run icons && node scripts/apply-android.mjs",
+    "android:open": "npx cap open android",
     "android:build": "cd android && gradlew.bat bundleRelease",
     "android:apk": "cd android && gradlew.bat assembleDebug",
     "android:apk:release": "cd android && gradlew.bat assembleRelease",
@@ -24,10 +25,7 @@
     "@capacitor/android": "^8.5.3",
     "@capacitor/app": "^8.1.2",
     "@capacitor/core": "^8.5.3",
-    "@capacitor/splash-screen": "^8.0.2",
-    "@capacitor/status-bar": "^8.0.4",
-    "@capacitor-community/admob": "^8.2.1",
-    "cordova-plugin-purchase": "^13.19.1"
+    "@capacitor/status-bar": "^8.0.4"
   },
   "devDependencies": {
     "@capacitor/cli": "^8.5.3"
